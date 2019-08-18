@@ -1,1 +1,13 @@
-<h1>Keeping Personal Notes organized and Ready for Review!</h1>
+<h1 class= "text-center">Keeping Personal Notes organized and Ready for Review! </h1>
+<div class="container text-center">
+<%= link_to 'Write a Note', new_note_path %>
+</div>
+<% @notes.each do |note| %>
+  <div class="booyah-boz col-10 offset-1">
+    <h1><%= note.name %></h1><br />
+    <i><%= note.date %></i><br />
+    <p><%= note.description %></p><br />
+  </div>
+
+  <hr />
+<% end %>
